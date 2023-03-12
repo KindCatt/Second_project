@@ -1,0 +1,199 @@
+.tabs {
+	padding: 30px 0 0 0;
+
+	// .tabs__body
+	&__body {
+		margin: 0 75px;
+
+	}
+	// .tabs__tab
+	&__tab {}
+}
+
+.tab {
+	position: relative;
+
+	// .tab__radio
+	&__radio {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+
+		display: block;
+		width: $tabsWidth;
+		height: $tabsHeight;
+		margin: 0;
+
+		opacity: 0;
+
+		cursor: pointer;
+
+		// .tab__radio_1
+		&_1 {
+			&:checked {
+				~ .tab__item_1 {
+					z-index: 3;
+
+					box-shadow: 0 -3px 0 3px $tabsColor;
+					background-color: #fff;
+				}
+				~ .tab__content_1 {
+					display: block;
+				}
+			}
+			&:hover {
+				~ .tab__item_1 {
+					transform: scale(1.05);
+				}
+			}
+		}
+		// .tab__radio_2
+		&_2 {
+			left: $tabsWidth;
+
+			&:checked {
+				~ .tab__item_2 {
+					z-index: 3;
+
+					box-shadow: 0 -3px 0 3px $tabsColor;
+					background-color: #fff;
+				}
+				~ .tab__content_2 {
+					display: block;
+				}
+			}
+			&:hover {
+				~ .tab__item_2 {
+					transform: scale(1.05);
+				}
+			}
+		}
+		// .tab__radio_3
+		&_3 {
+			left: $tabsWidth * 2;
+
+			&:checked {
+				~ .tab__item_3 {
+					z-index: 3;
+
+					box-shadow: 0 -3px 0 3px $tabsColor;
+					background-color: #fff;
+				}
+				~ .tab__content_3 {
+					display: block;
+				}
+			}
+			&:hover {
+				~ .tab__item_3 {
+					transform: scale(1.05);
+				}
+			}
+		}
+		// .tab__radio_4
+		&_4 {
+			left: $tabsWidth * 3;
+
+			&:checked {
+				~ .tab__item_4 {
+					z-index: 3;
+
+					box-shadow: 0 -3px 0 3px $tabsColor;
+					background-color: #fff;
+				}
+				~ .tab__content_4 {
+					display: block;
+				}
+			}
+			&:hover {
+				~ .tab__item_4 {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+
+	// .tab__item
+	&__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: $tabsWidth;
+		height: $tabsHeight;
+		padding: 25px 30px;
+
+		text-align: center;
+
+		transition: all 0.3s ease;
+
+		// .tab__item_1
+		&_1 {}
+		// .tab__item_2
+		&_2 {
+			left: $tabsWidth;
+		}
+		// .tab__item_3
+		&_3 {
+			left: $tabsWidth * 2;
+		}
+		// .tab__item_4
+		&_4 {
+			left: $tabsWidth * 3;
+		}
+	}
+
+	// .tab__icon
+	&__icon {
+		margin-bottom: 20px;
+	}
+	// .tab__label
+	&__label {
+		@include tabs-textM (26px, 1.2);
+	}
+
+	// .tab__content
+	&__content {
+		position: relative;
+		top: $tabsHeight;
+		left: 0;
+		right: 0;
+
+		display: none;
+		margin-bottom: $tabsHeight;
+		padding: 0 50px;
+
+		outline: 3px solid $tabsColor;
+
+		// .tab__content_1
+		&_1 {}
+		// .tab__content_2
+		&_2 {}
+		// .tab__content_3
+		&_3 {}
+		// .tab__content_4
+		&_4 {}
+	}
+
+	// .tab__image
+	&__image {
+		padding: 100px 0 30px 0;
+
+		text-align: center;
+	}
+	// .tab__title
+	&__title {
+		@include tabs-textM (38px, 1.2);
+		margin-bottom: 30px;
+	}
+	// .tab__text
+	&__text {
+		padding-bottom: 70px;
+
+		@include tabs-textM (14px, 24px);
+
+		p + p {
+			margin-top: 30px;
+		}
+	}
+}

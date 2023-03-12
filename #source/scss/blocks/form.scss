@@ -1,0 +1,104 @@
+.form {
+	padding: 20px 0 30px 0;
+
+	// .form__body
+	&__body {
+		display: flex;
+		margin: 0 0 0 75px;
+	}
+
+	// .form__inner
+	&__inner {
+		flex: 0 1 470px;
+		margin-right: 65px;
+
+		border-radius: 5px;
+
+		// .form__inner_login
+		&_login {
+			background-color: #e67624;
+		}
+
+		// .form__inner_email
+		&_email {
+			background-color: #01d4f3;
+		}
+	}
+
+	// .form__item
+	&__item {
+		padding: 15px 15px 15px 30px;
+	}
+
+	// .form__title
+	&__title {
+		margin-bottom: 20px;
+
+		font-size: 28px;
+		color: #ffffff;
+	}
+
+	// .form__data
+	&__data {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		& div:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	// .form__data-name
+	&__data-name {
+		flex: 0 1 50%;
+	}
+
+	// .form__name
+	&__name {
+		@include place;
+	}
+
+	// .form__data-password
+	&__data-password {
+		flex: 0 1 50%;
+	}
+
+	// .form__password
+	&__password {
+		@include place;
+	}
+
+	// .form__data-button
+	&__data-button {
+		flex: 0 0 auto;
+
+		@include animTransition {
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+			&:active {
+				transform: scale(0.95);
+				box-shadow: none;
+			}
+		}
+	}
+
+	// .form__button
+	&__button {
+		@include input-button (#444444, #ffffff, 30px);
+
+		@include animTransition {
+			filter: brightness(130%)
+		}
+	}
+
+	// .form__data-email
+	&__data-email {
+		flex: 0 1 100%;
+	}
+
+	// .form__email
+	&__email {
+		@include place;
+	}
+}

@@ -1,0 +1,28 @@
+//animation============================
+%animTransit {
+	transition: all 0.3s ease;
+}
+
+//form=================================
+%inputButton {
+	width: 100%;
+	padding: 0 10px;
+
+	font-size: 16px;
+}
+
+////form=================================
+
+//footer===============================
+%footer-title {
+	font-size: 22px;
+	color: $colorHF;
+}
+
+%footer-text {
+	font-family: $fontFam-footer;
+	font-size: 13px;
+	line-height: 22px;
+	color: $colorHF;
+}
+////footer===============================

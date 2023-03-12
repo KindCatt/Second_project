@@ -1,0 +1,42 @@
+//Подключаемые шрифты==================
+
+////===================================
+
+
+//Скачанные шрифты==================
+@font-face {
+	font-family: 'MrsEaves';
+	src: url('../fonts/MrsEavesSmartLig-Italic.eot');
+	src: url('../fonts/MrsEavesSmartLig-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MrsEavesSmartLig-Italic.woff2') format('woff2'),
+		url('../fonts/MrsEavesSmartLig-Italic.woff') format('woff'),
+		url('../fonts/MrsEavesSmartLig-Italic.svg#MrsEavesSmartLig-Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Segoe WP';
+	src: url('../fonts/SegoeWP-Semibold.eot');
+	src: url('../fonts/SegoeWP-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SegoeWP-Semibold.woff2') format('woff2'),
+		url('../fonts/SegoeWP-Semibold.woff') format('woff'),
+		url('../fonts/SegoeWP-Semibold.svg#SegoeWP-Semibold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Segoe WP';
+	src: url('../fonts/SegoeWP-Light.eot');
+	src: url('../fonts/SegoeWP-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SegoeWP-Light.woff2') format('woff2'),
+		url('../fonts/SegoeWP-Light.woff') format('woff'),
+		url('../fonts/SegoeWP-Light.svg#SegoeWP-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+////===================================

@@ -1,0 +1,71 @@
+//Стилизация плейсхолдера
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+	&::-ms-input-placeholder {
+		@content;
+	}
+	&::placeholder {
+		@content;
+	}
+}
+
+@mixin place {
+	@extend %animTransit;
+
+	@include input-button (#e8e8e8, #444444, 26px);
+
+	@include placeholder {
+		font-size: 16px;
+		color: $colorCon;
+
+		transition: all 1s ease;
+	}
+	&:focus {
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+		@include placeholder {
+			transform: translateX(-120%) scaleX(-1);
+		}
+	}
+}
+
+//animation============================
+@mixin animTransition {
+	@extend %animTransit;
+	&:hover {
+		@content;
+	}
+}
+
+//input-button=========================
+@mixin input-button ($in-butBack, $in-butColor, $in-butLine){
+	background-color: $in-butBack;
+	color: $in-butColor;
+	line-height: $in-butLine;
+	@extend %inputButton;
+}
+
+//slider-tabs==========================
+@mixin tabs-textM ($fontz, $lineH) {
+	font-size: $fontz;
+	line-height: $lineH;
+	color: $colorCon;
+}
+
+//footer===============================
+@mixin footer-textM ($opacity, $fontW: normal) {
+	opacity: $opacity;
+	font-weight: $fontW;
+	@extend %footer-text;
+}
